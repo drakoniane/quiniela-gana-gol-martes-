@@ -29,8 +29,9 @@ let r=document.createElement("tr");
 r.innerHTML=`<td><button class="sel" onclick="elegir(${i},'L',this)">L</button></td><td class="eq">${p[0]}</td><td><button class="sel" onclick="elegir(${i},'E',this)">E</button></td><td class="eq2">${p[1]}</td><td><button class="sel" onclick="elegir(${i},'V',this)">V</button></td>`;
 t.appendChild(r);});
 function elegir(i,v,b){sel[i]=v;let row=b.parentElement.parentElement;row.querySelectorAll(".sel").forEach(x=>x.classList.remove("on"));b.classList.add("on");}
-function limpiar(){sel=Array(9).fill("");document.querySelectorAll(".sel").forEach(x=>x.classList.remove("on"));}
+function limpiarSel(){sel=Array(9).fill("");document.querySelectorAll(".sel").forEach(x=>x.classList.remove("on"));}
+function limpiar(){sel=Array(9).fill("");jugadas=[];document.getElementById("nombre").value="";document.getElementById("total").textContent="0.00";document.querySelectorAll(".sel").forEach(x=>x.classList.remove("on"));}
 function aleatorio(){let o=["L","E","V"];sel=sel.map(()=>o[Math.floor(Math.random()*3)]);document.querySelectorAll("tr").forEach((tr,i)=>{tr.querySelectorAll(".sel").forEach(b=>{b.classList.toggle("on",b.textContent==sel[i])})});}
-function agregar(){if(sel.includes("")){alert("Falta marcar un partido");return}jugadas.push([...sel]);document.getElementById("total").textContent=(jugadas.length*10).toFixed(2);alert("Quiniela "+jugadas.length+" agregada!");limpiar();}
+function agregar(){if(sel.includes("")){alert("Falta marcar un partido");return}jugadas.push([...sel]);document.getElementById("total").textContent=(jugadas.length*10).toFixed(2);alert("Quiniela "+jugadas.length+" agregada!");limpiarSel();}
 function enviar(){let n=document.getElementById("nombre").value||"SIN NOMBRE";let lista=[...jugadas];if(!sel.includes("")&&sel.some(v=>v!="")){lista.push([...sel]);}if(lista.length==0){alert("Primero marca tus 9 partidos y dale Agregar o Enviar");return}let msg="QUINIELA GANA-GOL MEDIA SEMANA%0A"+encodeURIComponent(n)+"%0A";lista.forEach((j,idx)=>{msg+="Q"+(idx+1)+": "+j.join(" ")+"%0A";});msg+="Quinielas: "+lista.length+"%0ATotal: $"+(lista.length*10);window.open("https://wa.me/524421148969?text="+msg);}
 </script></body></html>
