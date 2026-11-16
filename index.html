@@ -35,3 +35,26 @@ function aleatorio(){let o=["L","E","V"];sel=sel.map(()=>o[Math.floor(Math.rando
 function agregar(){if(sel.includes("")){alert("Falta marcar un partido");return}quinielas++;document.getElementById("total").textContent=(quinielas*10).toFixed(2);limpiar();}
 function enviar(){let n=document.getElementById("nombre").value||"SIN NOMBRE";let msg="QUINIELA MEDIA SEMANA%0A"+n+"%0AQuinielas: "+quinielas+"%0ATotal: $"+(quinielas*10)+"%0A";window.open("https://wa.me/524531381636?text="+msg);}
 </script></body></html>
+<script>
+const partidos=[
+["🇭🇺 HUNGRIA","IRLANDA DEL NORTE 🏴"],
+["🇵🇱 POLONIA","SUECIA 🇸🇪"],
+["🇩🇰 DINAMARCA","NORUEGA 🇳🇴"],
+["🏴󐁧󐁢󐁷󐁬󐁳󐁿 GALES","PORTUGAL 🇵🇹"],
+["🇨🇱 CHILE","COLOMBIA 🇨🇴"],
+["🇦🇷 ARGENTINA","COSTA RICA 🇨🇷"],
+["🇪🇨 ECUADOR","BOLIVIA 🇧🇴"],
+["🇺🇾 URUGUAY","R. DOMINICANA 🇩🇴"],
+["🇲🇽 MEXICO","JAMAICA 🇯🇲"]];
+let sel=Array(9).fill("");let quinielas=0;
+let t=document.getElementById("tabla");
+partidos.forEach((p,i)=>{
+let r=document.createElement("tr");
+r.innerHTML=`<td><button class="sel" onclick="elegir(${i},'L',this)">L</button></td><td class="eq">${p[0]}</td><td><button class="sel" onclick="elegir(${i},'E',this)">E</button></td><td class="eq2">${p[1]}</td><td><button class="sel" onclick="elegir(${i},'V',this)">V</button></td>`;
+t.appendChild(r);});
+function elegir(i,v,b){sel[i]=v;let row=b.parentElement.parentElement;row.querySelectorAll(".sel").forEach(x=>x.classList.remove("on"));b.classList.add("on");}
+function limpiar(){sel=Array(9).fill("");document.querySelectorAll(".sel").forEach(x=>x.classList.remove("on"));}
+function aleatorio(){let o=["L","E","V"];sel=sel.map(()=>o[Math.floor(Math.random()*3)]);document.querySelectorAll("tr").forEach((tr,i)=>{tr.querySelectorAll(".sel").forEach(b=>{b.classList.toggle("on",b.textContent==sel[i])})});}
+function agregar(){if(sel.includes("")){alert("Falta marcar un partido");return}quinielas++;document.getElementById("total").textContent=(quinielas*10).toFixed(2);limpiar();}
+function enviar(){let n=document.getElementById("nombre").value||"SIN NOMBRE";let msg="QUINIELA GANA-GOL MEDIA SEMANA%0A"+n+"%0AQuinielas: "+quinielas+"%0ATotal: $"+(quinielas*10)+"%0A";window.open("https://wa.me/524421148969?text="+msg);}
+</script></body></html>
