@@ -1,40 +1,16 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Gana-Gol - Quiniela Martes</title><style>
-*{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}body{margin:0;background:#000;padding:0}.wrap{max-width:640px;margin:auto;min-height:100vh;background:repeating-linear-gradient(-45deg,transparent 0 18px,rgba(0,0,0,.18) 18px 20px),repeating-linear-gradient(45deg,transparent 0 18px,rgba(0,0,0,.18) 18px 20px),#ff6a00}
-.top{text-align:center;padding:14px 10px 0;position:relative}.cinta{background:#000;color:#ffd700;font-weight:900;padding:6px;font-size:14px;letter-spacing:1px}.badge{display:inline-block;background:#0a5c2e;color:#fff;padding:6px 14px;border-radius:20px;font-weight:900}.badge span{font-size:28px;letter-spacing:1px}.badge span i{font-style:normal;color:#ffd700}.balon-wrap{display:inline-block;position:relative;margin:6px}.balon{font-size:38px;display:block;transform:rotate(-18deg)}.rayas{position:absolute;right:-38px;top:50%;transform:translateY(-50%);font-weight:900;color:#000;font-size:18px;line-height:.8}.polvo{position:absolute;left:-16px;bottom:-6px;font-size:18px}.golpe{position:absolute;left:-14px;top:-8px;font-size:20px}
-h1{margin:2px 0;font-size:34px;line-height:1;text-transform:uppercase;text-shadow:2px 2px 0 #fff}h2{margin:0 0 8px;font-size:22px}
-table{width:100%;border-collapse:collapse;background:rgba(255,255,255,.92)}td{border-bottom:1px solid #ddd;padding:9px 4px;font-weight:900;font-size:13px;text-align:center}td.eq{text-align:left}td.eq2{text-align:right}.sel{width:32px;height:32px;border:2px solid #000;background:#fff;font-weight:900;cursor:pointer}.sel.on{background:#000;color:#ffd700}.precio{background:linear-gradient(90deg,#ff2e2e,#ffd700,#0a5c2e);padding:10px;font-weight:900;display:flex;justify-content:space-between;font-size:16px}.info{text-align:center;background:#fff;padding:8px;font-weight:900;font-size:20px}.info a{color:#0a5c2e;text-decoration:none}.face{background:#0a5c2e;color:#fff;text-align:center;padding:10px;font-weight:900;font-size:18px}.total{text-align:center;background:#fff;padding:10px;font-size:26px;font-weight:900}input{width:calc(100% - 20px);margin:10px;padding:12px;font-size:16px;text-transform:uppercase}.btns{display:flex;gap:8px;padding:0 10px}.btns button{flex:1;padding:12px;border:0;color:#fff;font-weight:900;font-size:16px}.rojo{background:#ff2e2e}.azul{background:#1e88e5}.negro{background:#222}.enviar{margin:12px 10px;background:#25D366;color:#fff;border:0;width:calc(100% - 20px);padding:14px;font-size:18px;font-weight:900}
-</style></head><body><div class="wrap"><div class="top"><div class="cinta">QUINIELAS MEXICO</div><div class="balon-wrap"><span class="balon">⚽</span><span class="rayas">///</span><span class="polvo">💨</span><span class="golpe">💥</span></div><h1>Quinielas Mexico</h1><h2>MEDIA SEMANA</h2></div>
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quinielas Gana-Gol</title><style>
+*{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}body{margin:0;background:#000}.wrap{max-width:640px;margin:auto;min-height:100vh;background:repeating-linear-gradient(-45deg,transparent 0 14px,rgba(0,0,0,.28) 14px 16px),repeating-linear-gradient(45deg,transparent 0 14px,rgba(0,0,0,.28) 14px 16px),#ff6a00}
+.top{text-align:center;padding:14px 10px 0}.balon-wrap{display:inline-flex;align-items:center;gap:8px;background:rgba(0,0,0,.65);border-radius:50px;padding:10px 18px 10px 12px;border:3px solid #000;box-shadow:0 4px 0 #000}.balon{font-size:44px;transform:rotate(-18deg);filter:sepia(1) saturate(6) hue-rotate(5deg) brightness(1.15) contrast(1.1);text-shadow:0 0 12px #FFD700}.rayas{color:#FFD700;font-weight:900;font-size:22px;line-height:.7}.polvo{font-size:20px}
+h1{margin:8px 0 0;font-size:36px;line-height:1;text-transform:uppercase;color:#000;text-shadow:2px 2px 0 #fff}h2{margin:0 0 10px;font-size:24px;color:#000;text-shadow:1px 1px 0 #fff}
+table{width:100%;border-collapse:collapse;background:rgba(255,255,255,.95)}td{border-bottom:1px solid #ddd;padding:9px 4px;font-weight:900;font-size:13px;text-align:center}td.eq{text-align:left}td.eq2{text-align:right}.sel{width:32px;height:32px;border:2px solid #000;background:#fff;font-weight:900;cursor:pointer;color:#1e88e5}.sel.on{background:#000;color:#FFD700}.precio{background:linear-gradient(90deg,#ff2e2e,#FFD700,#0a5c2e);padding:10px;font-weight:900;display:flex;justify-content:space-between;font-size:15px}.info{text-align:center;background:#fff;padding:8px;font-weight:900;font-size:20px}.info a{color:#0a5c2e;text-decoration:none}.total{text-align:center;background:#fff;padding:10px;font-size:26px;font-weight:900}input{width:calc(100% - 20px);margin:10px;padding:12px;font-size:16px;text-transform:uppercase}.btns{display:flex;gap:8px;padding:0 10px}.btns button{flex:1;padding:12px;border:0;color:#fff;font-weight:900;font-size:16px}.rojo{background:#ff2e2e}.azul{background:#1e88e5}.negro{background:#222}.enviar{margin:12px 10px;background:#25D366;color:#fff;border:0;width:calc(100% - 20px);padding:14px;font-size:18px;font-weight:900}
+</style></head><body><div class="wrap"><div class="top"><div class="balon-wrap"><span class="balon">⚽</span><span class="rayas">///</span><span class="polvo">💨</span><span>💥</span></div><h1>Quinielas<br>Gana-Gol</h1><h2>MEDIA SEMANA</h2></div>
 <table id="tabla"></table>
-<div class="precio"><span>PRECIO: $10.00</span><span>CIERRE: MARTES 9:00 A. M.</span></div>
-<div class="info">INFORMES: <a href="https://wa.me/524531381636">+524531381636</a></div>
-<div class="face">f &nbsp; QUINIELAS MÉXICO</div>
+<div class="precio"><span>QUINIELA DE $10.00</span><span>CIERRE: MARTES 9:00 A. M.</span></div>
+<div class="info">INFORMES: <a href="https://wa.me/524421148969">+524421148969</a></div>
 <div class="total">TOTAL: $<span id="total">0.00</span></div>
 <input id="nombre" placeholder="NOMBRE DEL PARTICIPANTE">
 <div class="btns"><button class="rojo" onclick="limpiar()">Limpiar</button><button class="azul" onclick="agregar()">Agregar</button><button class="negro" onclick="aleatorio()">Aleatorio</button></div>
 <button class="enviar" onclick="enviar()">Enviar 🟢</button>
-<script>
-const partidos=[
-["🇭🇺 HUNGRIA","IRLANDA DEL NORTE 🏴"],
-["🇵🇱 POLONIA","SUECIA 🇸🇪"],
-["🇩🇰 DINAMARCA","NORUEGA 🇳🇴"],
-["🏴󐁧󐁢󐁷󐁬󐁳󐁿 GALES","PORTUGAL 🇵🇹"],
-["🇨🇱 CHILE","COLOMBIA 🇨🇴"],
-["🇦🇷 ARGENTINA","COSTA RICA 🇨🇷"],
-["🇪🇨 ECUADOR","BOLIVIA 🇧🇴"],
-["🇺🇾 URUGUAY","R. DOMINICANA 🇩🇴"],
-["🇲🇽 MEXICO","JAMAICA 🇯🇲"]];
-let sel=Array(9).fill("");let quinielas=0;
-let t=document.getElementById("tabla");
-partidos.forEach((p,i)=>{
-let r=document.createElement("tr");
-r.innerHTML=`<td><button class="sel" onclick="elegir(${i},'L',this)">L</button></td><td class="eq">${p[0]}</td><td><button class="sel" onclick="elegir(${i},'E',this)">E</button></td><td class="eq2">${p[1]}</td><td><button class="sel" onclick="elegir(${i},'V',this)">V</button></td>`;
-t.appendChild(r);});
-function elegir(i,v,b){sel[i]=v;let row=b.parentElement.parentElement;row.querySelectorAll(".sel").forEach(x=>x.classList.remove("on"));b.classList.add("on");}
-function limpiar(){sel=Array(9).fill("");document.querySelectorAll(".sel").forEach(x=>x.classList.remove("on"));}
-function aleatorio(){let o=["L","E","V"];sel=sel.map(()=>o[Math.floor(Math.random()*3)]);document.querySelectorAll("tr").forEach((tr,i)=>{tr.querySelectorAll(".sel").forEach(b=>{b.classList.toggle("on",b.textContent==sel[i])})});}
-function agregar(){if(sel.includes("")){alert("Falta marcar un partido");return}quinielas++;document.getElementById("total").textContent=(quinielas*10).toFixed(2);limpiar();}
-function enviar(){let n=document.getElementById("nombre").value||"SIN NOMBRE";let msg="QUINIELA MEDIA SEMANA%0A"+n+"%0AQuinielas: "+quinielas+"%0ATotal: $"+(quinielas*10)+"%0A";window.open("https://wa.me/524531381636?text="+msg);}
-</script></body></html>
 <script>
 const partidos=[
 ["🇭🇺 HUNGRIA","IRLANDA DEL NORTE 🏴"],
